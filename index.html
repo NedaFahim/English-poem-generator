@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Poem Generator</title>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css">
 </head>
 
 <body>
     <div class="container">
-    <header>
-        <h1>Welcome to AI English Poem Generator</h1>
-    </header>
-    <main>
-        <form action="">
-            <input type="text" class="instructions" placeholder="Enter the topic of the poem" autofocus required autocomplete="off" />
-            <input type="submit" class="submitButton" value="submit">
-        </form>
-        <div class="poem">
-            The poem will go here
-        </div>
-    </main>
+        <header>
+            <h1>Welcome to AI English Poem Generator</h1>
+        </header>
+        <main>
+            <form id="poem-generator-form">
+                <input type="text" class="instructions" placeholder="Enter the topic of the poem" autofocus required
+                    autocomplete="off" />
+                <input type="submit" class="submitButton" value="submit">
+            </form>
+            <div class="poem" id="poem">
+            </div>
+        </main>
 
-    <footer>This AI ptoject is coded by <a target="_blank" href="https://github.com/NedaFahim">Neda Fahim</a> and is <a
-            target="_blank" href="https://github.com/NedaFahim/English-poem-generator">open-sourced on
-            GitHub</a> and is hosted on <a target="_blank"
-            href="https://nedafahim.github.io/English-poem-generator/"></a> GitHub
-    </footer>
+        <footer>This AI ptoject is coded by <a target="_blank" href="https://github.com/NedaFahim">Neda Fahim</a> and is
+            <a target="_blank" href="https://github.com/NedaFahim/English-poem-generator">open-sourced on
+                GitHub</a> and is hosted on <a target="_blank"
+                href="https://nedafahim.github.io/English-poem-generator/"></a> GitHub
+        </footer>
     </div>
     <script src="src/script.js"></script>
 

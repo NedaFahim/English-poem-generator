@@ -5,7 +5,7 @@ function displayPoem(response) {
     strings: response.data.answer,
     autoStart: true,
     cursor: null,
-    delay: 1,
+    delay: 20,
   });
 }
 
@@ -17,6 +17,11 @@ function generatePoem(event) {
     "you are a romantic poem expert and love to write short poems. your mission is to generate a 4 line poem in basic HTML. make sure to follow user instructions.";
   let prompt = `user instructions: generate an English poem about ${instructionsInput.value}. sign the poem with 'SheCodes AI' inside an <strong> element. do not show "html" on the top.`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class = "blink"> ⏳ Generating an English poem about ${instructionsInput.value} </div>`;
+
   console.log(`generate a poem about ${instructionsInput.value}`);
 
   axios.get(apiURL).then(displayPoem);
